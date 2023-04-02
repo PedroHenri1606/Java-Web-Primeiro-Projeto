@@ -21,15 +21,12 @@ public class UsuarioController {
 
     @GetMapping
     public ResponseEntity<List<Usuario>> buscarTodos(){
-        List<Usuario> lista = usuarioService.listarUsuarios();
-        return ResponseEntity.ok().body(lista);
+        return ResponseEntity.status(200).body(usuarioService.listarUsuarios());
     }
 
     @PostMapping
     public ResponseEntity<Usuario> adicionar(@RequestBody Usuario usuario){
-        usuario = usuarioService.salvar(usuario);
-        URI uri = ServletUriComponentsBuilder.fromCurrentRequestUri().path("/{id}").buildAndExpand(usuario.getId()).toUri();
-        return ResponseEntity.created(uri).body(usuario);
+        return ResponseEntity.status(201).body(usuarioService.salvar(usuario));
     }
 
     @PutMapping(value = "/{id}")
