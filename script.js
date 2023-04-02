@@ -7,7 +7,7 @@ const Itel = document.querySelector(".tel");
 
 function cadastrar(){
 
-    fetch("http://localhost:8080/cadastrar",
+    fetch("http://localhost:8080/usuarios",
     {
         headers: {
             'Accept': 'application/json',
@@ -16,7 +16,7 @@ function cadastrar(){
         method: "POST",
         body: JSON.stringify({
             nome: Inome.value,
-            email: Iemail.value,
+            email: Iemail.value, 
             senha: Isenha.value,
             telefone: Itel.value
         })
