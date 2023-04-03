@@ -6,11 +6,13 @@
 h1{
     margin-top: 40px;
     margin-bottom: 40px;
-    color: white;
+    color: #f8f4c4;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 100px;
 }
 
 body {
-    background-color: orange;
+    background-color: #47667b;
 } 
 
 .box, form{
@@ -22,13 +24,43 @@ body {
 }
 
 input {
-    width: 250px;
-    height: 30px;
-    border-radius: 5px;
+    width: 400px;
+    height: 40px;
+    border-radius: 10px;
+    font-weight: bolder;
+    font-size: 15px;
     padding: 0 15px 0 15px; 
+    transition: 1s;
+    background-color: #d5e0b5;
 }
 
-button {
-    width: 150px;
-    height: 25px;
+input:hover{
+    transform: scale(1.05);
+    border-color: #a5c3a7;
+    transition: 1s;
+}
+
+.botao {
+    background-color: #d5e0b5;
+    color:#6d8b89;
+    border-color: #6d8b89;
+    margin-top: 50px;
+    width: 200px;
+    height: 60px;
+    font-size: 20px;
+    font-family: 'Bebas Neue', cursive;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 1s;
+
+}
+
+.botao:hover {
+    transform: scale(1.08);
+    border-radius: 20px;
+    cursor: pointer;
+   
+    border-color: #6d8b89;
+    color: #6d8b89;
+    transition: 1s;
 }
